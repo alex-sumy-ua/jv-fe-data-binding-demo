@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Data Binding Demo</string>
+    <string name="hello_i_am">Hello! I am...</string>
+    <string name="email">Email</string>
+    <string name="age">age</string>
+    <string name="name">Name</string>
+</resources>
