@@ -14,21 +14,17 @@ import com.example.databindingdemo.model.Person;
 
 public class MainActivity extends AppCompatActivity {
 
-    ActivityMainBinding activityMainBinding;
+    private ActivityMainBinding activityMainBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        // Initialize the Person object and set it to the binding
         Person person = new Person("Simon", "35", "simon.morgan@northcoders.com");
         activityMainBinding.setPerson(person);
-        activityMainBinding.setLifecycleOwner(this);
+        activityMainBinding.setLifecycleOwner(this); // Ensure the lifecycle owner is set
     }
-
 }
