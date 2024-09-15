@@ -21,6 +21,6 @@ public class MainActivity extends AppCompatActivity {
         // Initialize the Person object and set it to the binding
         Person person = new Person("Simon", "35", "simon.morgan@northcoders.com");
         activityMainBinding.setPerson(person);
-        activityMainBinding.setLifecycleOwner(this); // Ensure the lifecycle owner is set
+        activityMainBinding.setLifecycleOwner(this);
     }
 }
