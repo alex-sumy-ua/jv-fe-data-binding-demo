@@ -26,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Person person = new Person("Simon", 35, "simon.morgan@northcoders.com");
+        Person person = new Person("Simon", "35", "simon.morgan@northcoders.com");
         activityMainBinding.setPerson(person);
+        activityMainBinding.setLifecycleOwner(this);
     }
 
 }
